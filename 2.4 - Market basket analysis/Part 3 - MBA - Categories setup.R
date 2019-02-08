@@ -33,9 +33,9 @@ ggplot(items_freq, aes(x = Distinct_Items, y = Frequency)) +
        title = "Frequency of transactions with distinct categories sold")
 
 
-###########
-#visualize#
-###########
+########################
+#Continue vizualization#
+########################
 
 itemFrequencyPlot(Task_4 ,type = "absolute", topN = 10) 
 

@@ -1,5 +1,6 @@
 ### 04-02-2019
 #Market basket analysis V1.2: Use apriori and visualize data
+#############################################################
 
 ####################################
 #model 1: finding meaningfull rules#
@@ -16,6 +17,7 @@ Product_basket_analysis1 <- apriori(Task_4_full, parameter = list(support = (180
                                        maxlen = 2))
 
 
+##################################
 #summary and toplists by category#
 ##################################
 
@@ -27,10 +29,10 @@ inspect(sort(Product_basket_analysis1, by = "lift")[1:10])
 
 arulesViz::ruleExplorer(Product_basket_analysis1)
 
-plot(Product_basket_analysis1, method = "graph")
-###############################
-#model 2: raise support to 400#
-###############################
+
+##############################
+#model 2: set support at  130#
+##############################
 
 Product_basket_analysis2 <- apriori(Task_4_full, parameter = list(support = (130/9832),
                                        confidence = 0.001,
@@ -44,9 +46,9 @@ arulesViz::ruleExplorer(Product_basket_analysis2)
 
 
 
-###############################
-#model 2: raise support to 600#
-###############################
+#############################
+#model 2: set support at  80#
+#############################
 
 Product_basket_analysis3 <- apriori(Task_4_full, parameter = list(support = (80/9832),
                                        confidence = 0.001,
@@ -57,14 +59,16 @@ inspect(sort(Product_basket_analysis3, by = "lift")[1:10])
 
 
 
-###############################
-#model 2: raise support to 800#
-###############################
+#############################
+#model 2: set support at  30#
+#############################
 
 Product_basket_analysis4 <- apriori(Task_4_full, parameter = list(support = (30/9832),
                                        confidence = 0.001,
                                        minlen = 3))
 
+
+###########################
 #identify dupplicate rules#
 ###########################
 
