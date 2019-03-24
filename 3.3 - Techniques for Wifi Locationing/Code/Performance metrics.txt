@@ -1,0 +1,49 @@
+Hello!
+
+This document will contain the performance metrics of the Wifi Localization task
+
+1)
+Predicting the building:
+- Accuracy: 0.9991
+- Kappa: 0.9986
+- Confusion matrix: 
+
+
+          Reference
+Prediction   0   1   2
+         0 536   0   0
+         1   0 307   1
+         2   0   0 267
+
+
+
+2)
+Predicting the floors:
+- Accuracy: 0.9622
+- Kappa: 0.9468
+- Confusion matrix: 
+
+
+          Reference
+Prediction   0   1   2   3   4
+         0 122   6   0   0   1
+         1   8 449   8   0   0
+         2   2   7 296   4   0
+         3   0   0   2 168   4
+         4   0   0   0   0  34
+
+
+3)
+Predicting latitude:
+RMSE: 6.7348810 
+Rsquared: 0.9908513     
+MAE: 4.6301153 
+
+
+
+4)
+Predicting longitude
+RMSE: 7.3766504 
+Rsquared: 0.9962827 
+MAE: 4.9232390 
+

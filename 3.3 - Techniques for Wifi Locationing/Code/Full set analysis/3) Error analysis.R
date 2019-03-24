@@ -38,7 +38,8 @@ postResample(all_y_values$knn_predict_LONGITUDE, all_y_values$LONGITUDE)
 
 
 #Genereate the model's errors for building
-all_y_values$errorBUILD <- as.numeric(all_y_values$BUILDINGID) - as.numeric(all_y_values$knn_predict_BUILDINGID)
+all_y_values$errorBUILD <- as.numeric(all_y_values$BUILDINGID) - 
+  as.numeric(all_y_values$knn_predict_BUILDINGID)
 
 #plot Correct building vs wrong building
 ggplot(all_y_values) +
